@@ -1,0 +1,10 @@
+What is a Static Website?
+Static websites are websites that consist of fixed contents, typically HTML, CSS, and JavaScript files, that are served to all visitors exactly as stored, it does not change based on user interactions, and without any backend or database processing.
+
+What is Amazon S3?
+Amazon S3(Simple Storage Service) is a cloud-based storage service provided by AWS, it allows users to store and retrieve data over the Internet. it provides a scalable, reliable, and highly available storage infrastructure for a variety of data types, including object storage, files, documents, and multimedia content.
+
+What is CloudFront?
+CloudFront is a Content Delivery Network(CDN) service also provided by AWS, it enables users to deliver content globally with low latency, high data transfer speed, and securely delivered.
+leveraging AWS edge locations around the world to cache and deliver content from the nearest location to the user, reducing latency and improving performance.
+It also offers features such as SSL/TLS encryption, access controls, and real-time metrics.
