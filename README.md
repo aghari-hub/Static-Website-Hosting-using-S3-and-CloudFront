@@ -1,4 +1,5 @@
 [README_static_website_s3_cloudfront.md](https://github.com/user-attachments/files/23712979/README_static_website_s3_cloudfront.md)
+Reffered from https://www.freecodecamp.org/news/host-a-static-website-on-aws-s3-and-cloudfront/
 # Static Website Hosting using Amazon S3 and CloudFront
 
 ## 📘 Overview
