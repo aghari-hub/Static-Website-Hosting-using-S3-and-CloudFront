@@ -1,0 +1,73 @@
+1. Create an S3 Bucket for Website Hosting
+
+Go to AWS Console → S3 → Create Bucket
+
+Enter a unique bucket name
+
+Choose region
+
+Disable “Block all public access” temporarily (for initial testing)
+
+Leave defaults and create the bucket
+
+2. Upload Website Files to S3
+
+Open your bucket → Click Upload
+
+Add all your static files (HTML/CSS/JS)
+
+Upload them
+
+3. Configure S3 Bucket Permissions
+
+Add this bucket policy to allow public read access (testing only):
+
+{
+   "Version": "2012-10-17",
+   "Statement": [
+       {
+           "Sid": "AddPerm",
+           "Effect": "Allow",
+           "Principal": "*",
+           "Action": "s3:GetObject",
+           "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+       }
+   ]
+}
+
+
+Replace YOUR_BUCKET_NAME with your actual bucket name.
+
+4. Enable Static Website Hosting in S3
+
+Open Properties tab → Static website hosting
+
+Enable
+
+Set index.html as the Index document
+
+Save
+
+Copy the Bucket Website Endpoint and test it in your browser
+
+⚠️ It loads but shows "Not Secure" because S3 doesn't provide HTTPS.
+
+Re-enable Block all public access after testing.
+
+5. Create a CloudFront Distribution
+
+Go to CloudFront → Create Distribution
+
+Origin Domain: select your S3 bucket
+
+Default Root Object: index.html
+
+CloudFront automatically provides HTTPS
+
+Create the distribution
+
+When complete:
+
+Copy the Distribution Domain Name
+
+Access your website securely using this domain
